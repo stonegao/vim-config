@@ -280,6 +280,7 @@ map <Leader>rs :RS<CR>
 " -----------------------------------------------------------------------------  
 " |                               Host specific                               |
 " -----------------------------------------------------------------------------  
+
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
@@ -295,3 +296,6 @@ endif
 "match LongLineWarning '\%120v.*'
 
 "autocmd User ~/git/some_folder/* call Tabstyle_spaces() | let g:force_xhtml=1
+
+call pathogen#infect()
+let g:Powerline_symbols = 'fancy'

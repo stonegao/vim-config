@@ -19,6 +19,6 @@ command! -nargs=0 EnsimeTypecheckAll   call ensime#Request(["swank:typecheck-all
 let s:c.prevent_typecheck = 0
 augroup ENSIME
   au!
-  autocmd BufWritePost *.scala if !s:c.prevent_typecheck | call ensime#TypecheckFile() | endif
+  "autocmd BufWritePost *.scala if !s:c.prevent_typecheck | call ensime#TypecheckFile() | endif
   autocmd BufRead,BufNewFile .ensime  setlocal ft=dot_ensime_config
 augroup end
