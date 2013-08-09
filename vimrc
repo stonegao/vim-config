@@ -299,3 +299,8 @@ endif
 
 call pathogen#infect()
 let g:Powerline_symbols = 'fancy'
+
+"pig scripts
+augroup filetypedetect
+  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
+augroup END
